@@ -1,0 +1,30 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: istio-reddit
+  namespace: istio-reddit
+  annotations:
+    fluxcd.io/tag.comment: semver:~0.1
+    fluxcd.io/tag.post: semver:~0.1
+    fluxcd.io/tag.ui: semver:~0.2
+    fluxcd.io/automated: 'true'
+spec:
+  releaseName: istio-reddit
+  chart:
+    git: git@github.com:fl64/reddit-flux
+    ref: master
+    path: charts/
+  values:
+    ui:
+      image:
+        repository: fl64/ui
+        tag: 0.2.3
+    post:
+      image:
+        repository: fl64/post
+        tag: 0.1.2
+    comment:
+      image:
+        repository: fl64/comment
+        tag: 0.1.1
