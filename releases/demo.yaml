@@ -12,19 +12,19 @@ metadata:
 spec:
   releaseName: demo
   chart:
-    git: git@github.com:czm41k/reddit-flux
+    git: git@github.com:fl64/reddit-flux
     ref: master
     path: charts/
   values:
     ui:
       image:
-        repository: czm41k/ui
+        repository: fl64/ui
         tag: 0.2.3
     post:
       image:
-        repository: czm41k/post
+        repository: fl64/post
         tag: 0.1.1
     comment:
       image:
-        repository: czm41k/comment
+        repository: fl64/comment
         tag: 0.1.1
