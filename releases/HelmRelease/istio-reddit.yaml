@@ -19,7 +19,7 @@ spec:
     ui:
       image:
         repository: fl64/ui
-        tag: 0.2.10
+        tag: 0.2.11
     post:
       image:
         repository: fl64/post
